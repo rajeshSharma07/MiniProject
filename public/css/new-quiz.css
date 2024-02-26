@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: #09001d;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+#quizTitle{
+    width: 80%;
+}
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #c40094;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.btn button {
+  padding: 10px 20px;
+  margin: 0 80px 20px 80px;
+}
+
+.btn1,
+.btn2 {
+  width: 300px;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  background: #c40094;
+  border: 2px solid #c40094;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn1 {
+  width: 200px;
+}
+
+.btn2 {
+  float: right;
+}
+
+#questionsContainer {
+  margin-top: 20px;
+}
+
+
+#questionsContainer div {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#questionsContainer select {
+  width: 20%;
+  position: absolute;
+  right: 0;
+  border: 2px solid #c40094;
+  border-radius: 6px;
+}
+
+#questionsContainer input[type="text"]:first-of-type {
+  width: 100%;
+}
+
+#questionsContainer input[type="text"]:not(:first-of-type) {
+  width: calc(50% - 3px);
+}

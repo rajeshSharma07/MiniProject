@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="/css/take-quiz.css">
+</head>
+<body>
+  <div class="quiz">
+    <h1>Take Quiz - <%= quiz.title %></h1>
+    <form action="/quizzes/<%= quiz._id %>/submit" method="post">
+        <% quiz.questions.forEach((question, index) => { %>
+          <fieldset>
+            <h2><%= index + 1 %>. <%= question.questionText %></h2>
+            <% question.options.forEach((option, i) => { %>
+              <label>
+                <input type="radio" name="answers[<%= index %>]" value="<%= i %>">
+                <span><%= option %></span>
+              </label><br>
+            <% }); %>
+          </fieldset>
+        <% }); %>
+        <br>
+        <input type="hidden" name="redirectTo" value="/quizzes/<%= quiz._id %>/quiz-submitted">
+        <button class="btn" type="submit">Submit Quiz</button>
+      </form>
+  </div>
+      <script src="/script/main.js"></script>
+</body>
+</html>

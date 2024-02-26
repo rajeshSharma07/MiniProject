@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzity</title>
+    <link rel="stylesheet" href="/css/quizzes.css">
+  </head>
+  <body>
+    <div class="quizzes">
+      <h1>Welcome to Quizzity</h1>
+      <ul>
+        <% for(let Quiz of allQuizes){ %>
+        <li class="quiz"><h4><%= Quiz.title %></h4><a class="btn" href="/quizzes/<%= Quiz._id %>">Start Quiz</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
